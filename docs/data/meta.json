@@ -1,0 +1,379 @@
+{
+ "generated": "2026-10-24",
+ "area_name": "群馬県玉村町",
+ "demand_name": "たまGO",
+ "demand_operator": "玉村町",
+ "dates": {
+  "sunday": "2026-10-25",
+  "weekday": "2026-10-28"
+ },
+ "demand_hours": {
+  "sunday": [
+   "9:00〜16:00"
+  ],
+  "weekday": [
+   "8:30〜17:00"
+  ]
+ },
+ "booking": "7日前から予約可・乗車20分前まで予約",
+ "has_locations_geojson": false,
+ "demand_points": 208,
+ "walk": {
+  "type": "osm",
+  "source": "OpenStreetMap API",
+  "text": "OpenStreetMap の道路網（OpenStreetMap API で取得）上の最短経路"
+ },
+ "boundary": {
+  "name": "玉村町",
+  "source": "OpenStreetMap relation/1867896"
+ },
+ "params": {
+  "walk_speed_m_per_min": 80,
+  "max_access_walk_m": 1500,
+  "max_transfer_walk_m": 300,
+  "demand_pickup_margin_min": 5,
+  "band_minutes": 60,
+  "sample_every_min": 5,
+  "mesh": "1/4地域メッシュ（約250m）"
+ },
+ "ride_model": {
+  "intercept": 11.93,
+  "slope_per_km": 3.0,
+  "r2": 0.91,
+  "records": 4001,
+  "period": [
+   "20251001",
+   "20260331"
+  ],
+  "od_with_median": 376
+ },
+ "flex_feed_version": "20260731",
+ "bus_agencies": [
+  "永井運輸",
+  "群馬バス",
+  "群馬中央バス"
+ ],
+ "sources": [
+  {
+   "name": "玉村町 デマンドタクシー「たまGO」GTFS-Flex・需要情報",
+   "holder": "玉村町",
+   "via": "公共交通オープンデータセンター",
+   "license": "CC BY 4.0",
+   "url": "https://ckan.odpt.org/dataset/go-tamamura-town-on-demand-taxi-tama-go",
+   "note": "「公共交通オープンデータチャレンジ2026」期間中の限定公開データ"
+  },
+  {
+   "name": "永井バス GTFS",
+   "holder": "永井運輸株式会社",
+   "via": "公共交通オープンデータセンター",
+   "license": "CC BY 4.0",
+   "url": "https://ckan.odpt.org/dataset/nagai_transportation_all_lines"
+  },
+  {
+   "name": "群馬中央バス GTFS",
+   "holder": "群馬中央バス株式会社",
+   "via": "公共交通オープンデータセンター",
+   "license": "CC BY 4.0",
+   "url": "https://ckan.odpt.org/dataset/gunmachuo_bus_all_lines"
+  },
+  {
+   "name": "群馬バス GTFS",
+   "holder": "株式会社群馬バス",
+   "via": "公共交通オープンデータセンター",
+   "license": "CC BY 4.0",
+   "url": "https://ckan.odpt.org/dataset/gunma_bus_all_lines"
+  }
+ ],
+ "saving_classes": [
+  0,
+  1,
+  5,
+  10,
+  20,
+  30
+ ],
+ "destinations": [
+  {
+   "id": "yakuba",
+   "label": "玉村町役場",
+   "lat": 36.303985,
+   "lon": 139.115536
+  },
+  {
+   "id": "tsunoda",
+   "label": "角田病院",
+   "lat": 36.311067,
+   "lon": 139.097612
+  },
+  {
+   "id": "torisen",
+   "label": "とりせん（買い物）",
+   "lat": 36.302049,
+   "lon": 139.126746
+  },
+  {
+   "id": "maebashi",
+   "label": "前橋駅",
+   "lat": 36.38383452435759,
+   "lon": 139.07247616823017
+  }
+ ],
+ "bands": [
+  {
+   "id": "wd09",
+   "label": "平日 9時台",
+   "day": "weekday",
+   "start": "09:00"
+  },
+  {
+   "id": "wd13",
+   "label": "平日 13時台",
+   "day": "weekday",
+   "start": "13:00"
+  },
+  {
+   "id": "wd16",
+   "label": "平日 16時台",
+   "day": "weekday",
+   "start": "16:00"
+  },
+  {
+   "id": "su10",
+   "label": "日曜 10時台",
+   "day": "sunday",
+   "start": "10:00"
+  }
+ ],
+ "scenarios": [
+  {
+   "id": "yakuba_su10",
+   "dest": "yakuba",
+   "band": "su10",
+   "summary": {
+    "cells": 382,
+    "share_saved_10": 0.27,
+    "share_saved_5": 0.408,
+    "median_saved": 2.9,
+    "max_saved": 33.5,
+    "mean_base": 32.9,
+    "mean_incl": 26.4
+   }
+  },
+  {
+   "id": "tsunoda_su10",
+   "dest": "tsunoda",
+   "band": "su10",
+   "summary": {
+    "cells": 382,
+    "share_saved_10": 0.594,
+    "share_saved_5": 0.738,
+    "median_saved": 13.5,
+    "max_saved": 54.5,
+    "mean_base": 47.8,
+    "mean_incl": 31.2
+   }
+  },
+  {
+   "id": "torisen_su10",
+   "dest": "torisen",
+   "band": "su10",
+   "summary": {
+    "cells": 382,
+    "share_saved_10": 0.215,
+    "share_saved_5": 0.39,
+    "median_saved": 2.2,
+    "max_saved": 24.0,
+    "mean_base": 30.9,
+    "mean_incl": 25.9
+   }
+  },
+  {
+   "id": "maebashi_su10",
+   "dest": "maebashi",
+   "band": "su10",
+   "summary": {
+    "cells": 382,
+    "share_saved_10": 0.66,
+    "share_saved_5": 0.66,
+    "median_saved": 30.0,
+    "max_saved": 121.4,
+    "mean_base": 130.6,
+    "mean_incl": 88.8
+   }
+  },
+  {
+   "id": "yakuba_wd09",
+   "dest": "yakuba",
+   "band": "wd09",
+   "summary": {
+    "cells": 382,
+    "share_saved_10": 0.23,
+    "share_saved_5": 0.382,
+    "median_saved": 2.7,
+    "max_saved": 33.5,
+    "mean_base": 32.4,
+    "mean_incl": 26.2
+   }
+  },
+  {
+   "id": "yakuba_wd13",
+   "dest": "yakuba",
+   "band": "wd13",
+   "summary": {
+    "cells": 382,
+    "share_saved_10": 0.243,
+    "share_saved_5": 0.408,
+    "median_saved": 2.9,
+    "max_saved": 33.5,
+    "mean_base": 32.8,
+    "mean_incl": 26.4
+   }
+  },
+  {
+   "id": "yakuba_wd16",
+   "dest": "yakuba",
+   "band": "wd16",
+   "summary": {
+    "cells": 382,
+    "share_saved_10": 0.126,
+    "share_saved_5": 0.312,
+    "median_saved": 1.9,
+    "max_saved": 16.5,
+    "mean_base": 32.9,
+    "mean_incl": 29.3
+   }
+  },
+  {
+   "id": "tsunoda_wd09",
+   "dest": "tsunoda",
+   "band": "wd09",
+   "summary": {
+    "cells": 382,
+    "share_saved_10": 0.592,
+    "share_saved_5": 0.741,
+    "median_saved": 13.6,
+    "max_saved": 54.5,
+    "mean_base": 47.8,
+    "mean_incl": 31.3
+   }
+  },
+  {
+   "id": "tsunoda_wd13",
+   "dest": "tsunoda",
+   "band": "wd13",
+   "summary": {
+    "cells": 382,
+    "share_saved_10": 0.607,
+    "share_saved_5": 0.741,
+    "median_saved": 13.8,
+    "max_saved": 54.5,
+    "mean_base": 47.9,
+    "mean_incl": 31.3
+   }
+  },
+  {
+   "id": "tsunoda_wd16",
+   "dest": "tsunoda",
+   "band": "wd16",
+   "summary": {
+    "cells": 382,
+    "share_saved_10": 0.419,
+    "share_saved_5": 0.61,
+    "median_saved": 7.5,
+    "max_saved": 25.7,
+    "mean_base": 47.7,
+    "mean_incl": 39.3
+   }
+  },
+  {
+   "id": "torisen_wd09",
+   "dest": "torisen",
+   "band": "wd09",
+   "summary": {
+    "cells": 382,
+    "share_saved_10": 0.209,
+    "share_saved_5": 0.39,
+    "median_saved": 2.2,
+    "max_saved": 22.7,
+    "mean_base": 30.7,
+    "mean_incl": 25.8
+   }
+  },
+  {
+   "id": "torisen_wd13",
+   "dest": "torisen",
+   "band": "wd13",
+   "summary": {
+    "cells": 382,
+    "share_saved_10": 0.212,
+    "share_saved_5": 0.387,
+    "median_saved": 2.3,
+    "max_saved": 22.7,
+    "mean_base": 30.9,
+    "mean_incl": 25.9
+   }
+  },
+  {
+   "id": "torisen_wd16",
+   "dest": "torisen",
+   "band": "wd16",
+   "summary": {
+    "cells": 382,
+    "share_saved_10": 0.052,
+    "share_saved_5": 0.251,
+    "median_saved": 1.4,
+    "max_saved": 13.5,
+    "mean_base": 30.9,
+    "mean_incl": 28.1
+   }
+  },
+  {
+   "id": "maebashi_wd09",
+   "dest": "maebashi",
+   "band": "wd09",
+   "summary": {
+    "cells": 382,
+    "share_saved_10": 0.521,
+    "share_saved_5": 0.584,
+    "median_saved": 10.0,
+    "max_saved": 131.4,
+    "mean_base": 121.9,
+    "mean_incl": 83.8
+   }
+  },
+  {
+   "id": "maebashi_wd13",
+   "dest": "maebashi",
+   "band": "wd13",
+   "summary": {
+    "cells": 382,
+    "share_saved_10": 0.565,
+    "share_saved_5": 0.613,
+    "median_saved": 26.0,
+    "max_saved": 119.2,
+    "mean_base": 130.0,
+    "mean_incl": 91.3
+   }
+  },
+  {
+   "id": "maebashi_wd16",
+   "dest": "maebashi",
+   "band": "wd16",
+   "summary": {
+    "cells": 382,
+    "share_saved_10": 0.338,
+    "share_saved_5": 0.369,
+    "median_saved": 0.0,
+    "max_saved": 61.4,
+    "mean_base": 131.8,
+    "mean_incl": 117.2
+   }
+  }
+ ],
+ "bounds": [
+  139.0861,
+  36.2751,
+  139.1702,
+  36.3353
+ ]
+}
