@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>たまGO 便利マップ</title>
+  <meta name="description" content="玉村町のデマンドタクシー「たまGO」を路線バス・徒歩と組み合わせると、目的地までの所要時間がどれだけ短くなるかを地図で示します。">
+  <meta name="theme-color" content="#1c5cab">
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="title-row">
+      <div>
+        <h1>たまGOで、もっと近くなる</h1>
+        <p class="sub" id="subtitle">玉村町 デマンド交通の効果マップ</p>
+      </div>
+      <button class="icon-btn" id="info-btn" aria-label="このマップについて・出典" aria-haspopup="dialog">i</button>
+    </div>
+    <div class="controls">
+      <div class="ctl" role="group" aria-labelledby="dest-label">
+        <span class="ctl-label" id="dest-label">目的地</span>
+        <div class="chips" id="dest-chips"></div>
+      </div>
+      <div class="ctl" role="group" aria-labelledby="band-label">
+        <span class="ctl-label" id="band-label">出発</span>
+        <div class="chips" id="band-chips"></div>
+      </div>
+    </div>
+    <p class="summary" id="summary" aria-live="polite"></p>
+  </header>
+
+  <main class="map-wrap">
+    <div id="map" aria-label="短縮時間の地図"></div>
+    <div class="notice" id="approx-notice" hidden></div>
+    <div class="legend" id="legend">
+      <div class="legend-title">たまGOを使うと短くなる時間</div>
+      <div class="legend-scale" id="legend-scale"></div>
+      <div class="legend-layers">
+        <label><input type="checkbox" id="tg-demand" checked><span class="dot dot-demand"></span>たまGO乗降地点</label>
+        <label><input type="checkbox" id="tg-bus"><span class="dot dot-bus"></span>バス停</label>
+      </div>
+    </div>
+    <p class="hint" id="hint">地図をタップすると、その場所からの比較が見られます</p>
+  </main>
+
+  <section class="sheet" id="sheet" hidden aria-live="polite">
+    <button class="sheet-close" id="sheet-close" aria-label="閉じる">×</button>
+    <div id="sheet-body"></div>
+  </section>
+
+  <div class="modal" id="info" hidden role="dialog" aria-modal="true" aria-labelledby="info-title">
+    <div class="modal-card">
+      <button class="sheet-close" id="info-close" aria-label="閉じる">×</button>
+      <h2 id="info-title">このマップについて</h2>
+      <div id="info-body"></div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

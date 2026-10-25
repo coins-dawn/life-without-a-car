@@ -1,0 +1,68 @@
+{
+  "area_name": "群馬県玉村町",
+  "demand_name": "たまGO",
+
+  "flex_zip": "data/raw/flex/tamamura_gtfs.zip",
+  "demand_zip": "data/raw/demand/tamamura_demand.zip",
+  "gtfs_zips": [
+    "data/raw/gtfs/nagai_bus.zip",
+    "data/raw/gtfs/gunmachuo_bus.zip",
+    "data/raw/gtfs/gunma_bus.zip"
+  ],
+  "output_dir": "docs/data",
+  "cache_dir": "data/cache",
+
+  "downloads": {
+    "data/raw/flex/tamamura_gtfs.zip": "https://api-public.odpt.org/api/v4/files/Demand/data/tamamura_gtfs.zip",
+    "data/raw/demand/tamamura_demand.zip": "https://api-public.odpt.org/api/v4/files/Demand/data/tamamura_demand.zip",
+    "data/raw/gtfs/nagai_bus.zip": "ckan:nagai_transportation_all_lines",
+    "data/raw/gtfs/gunmachuo_bus.zip": "ckan:gunmachuo_bus_all_lines",
+    "data/raw/gtfs/gunma_bus.zip": "ckan:gunma_bus_all_lines"
+  },
+
+  "destinations": [
+    {"id": "yakuba",   "label": "玉村町役場", "stop_name": "玉村町役場"},
+    {"id": "tsunoda",  "label": "角田病院",   "stop_name": "角田病院前"},
+    {"id": "torisen",  "label": "とりせん（買い物）", "stop_name": "とりせん前"},
+    {"id": "maebashi", "label": "前橋駅",     "stop_name": "前橋駅", "feed": "gtfs"}
+  ],
+
+  "bands": [
+    {"id": "wd09", "label": "平日 9時台",  "day": "weekday", "start": "09:00"},
+    {"id": "wd13", "label": "平日 13時台", "day": "weekday", "start": "13:00"},
+    {"id": "wd16", "label": "平日 16時台", "day": "weekday", "start": "16:00"},
+    {"id": "su10", "label": "日曜 10時台", "day": "sunday",  "start": "10:00"}
+  ],
+  "band_minutes": 60,
+  "sample_every_min": 5,
+  "service_dates": {"weekday": null, "sunday": null},
+
+  "mesh_max_dist_from_demand_stop_m": 800,
+  "mesh_max_walk_to_demand_stop_m": 1200,
+  "boundary_from_destination": "yakuba",
+
+  "walk_speed_m_per_min": 80,
+  "walk_detour_factor": 1.3,
+  "max_access_walk_m": 1500,
+  "max_transfer_walk_m": 300,
+  "demand_to_bus_walk_m": 500,
+
+  "demand_pickup_margin_min": 5,
+  "demand_od_min_samples": 3,
+
+  "sources": [
+    {"name": "玉村町 デマンドタクシー「たまGO」GTFS-Flex・需要情報", "holder": "玉村町",
+     "via": "公共交通オープンデータセンター", "license": "CC BY 4.0",
+     "url": "https://ckan.odpt.org/dataset/go-tamamura-town-on-demand-taxi-tama-go",
+     "note": "「公共交通オープンデータチャレンジ2026」期間中の限定公開データ"},
+    {"name": "永井バス GTFS", "holder": "永井運輸株式会社",
+     "via": "公共交通オープンデータセンター", "license": "CC BY 4.0",
+     "url": "https://ckan.odpt.org/dataset/nagai_transportation_all_lines"},
+    {"name": "群馬中央バス GTFS", "holder": "群馬中央バス株式会社",
+     "via": "公共交通オープンデータセンター", "license": "CC BY 4.0",
+     "url": "https://ckan.odpt.org/dataset/gunmachuo_bus_all_lines"},
+    {"name": "群馬バス GTFS", "holder": "株式会社群馬バス",
+     "via": "公共交通オープンデータセンター", "license": "CC BY 4.0",
+     "url": "https://ckan.odpt.org/dataset/gunma_bus_all_lines"}
+  ]
+}
